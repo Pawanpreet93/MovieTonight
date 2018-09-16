@@ -145,6 +145,7 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="adultLabel" destination="a07-in-8X2" id="nKu-Xp-NIC"/>
+                <outlet property="calenderIcon" destination="f82-H7-JOZ" id="vby-v7-cW2"/>
                 <outlet property="containerView" destination="1PO-1g-T5F" id="tMP-Yy-hbo"/>
                 <outlet property="languageLabel" destination="pfH-4y-fLc" id="qgz-WK-ufs"/>
                 <outlet property="movieTitleLabel" destination="r5a-nE-Tch" id="agZ-mt-04Z"/>

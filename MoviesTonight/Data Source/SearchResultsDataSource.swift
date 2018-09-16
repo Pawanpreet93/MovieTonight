@@ -9,15 +9,42 @@
 import Foundation
 import UIKit
 
+protocol TableDataChange {
+    func didChangeDataOfTable()
+}
+
 class SearchResultsDataSource: NSObject,  UITableViewDataSource {
     
+    var metaData = SearchResultsMetaData()
+    var searchObjects = [MovieResultsDataObject]()
+    var delegate:TableDataChange?
+    
+    func getData(for query:String) {
+        let object = GetSearchResults()
+        
+        searchObjects.removeAll()
+        
+        object.fetchResults(for: query, pageNumber: metaData.pageNumber ?? 1) { (status, resultObject) in
+            
+            self.metaData = resultObject?.metaData ?? SearchResultsMetaData()
+            
+            if let fetchedResults = resultObject?.results {
+                self.searchObjects.append(contentsOf: fetchedResults)
+            }
+            
+            DispatchQueue.main.sync {
+                self.delegate?.didChangeDataOfTable()
+            }
+        }
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return searchObjects.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell:MovieResultsTableViewCell = tableView.dequeueReusableCell(forIndexPath: indexPath)
-        cell.movieTitleLabel.text = "Movie Title"
+        cell.configureCell(withObject: searchObjects[indexPath.row])
         cell.selectionStyle = .none
         return cell
     }

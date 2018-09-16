@@ -59,6 +59,7 @@ class MovieResultsTableViewCell: UITableViewCell, ReusableView, NibLoadableView 
         }
     }
     @IBOutlet weak var releaseDateLabel: VerySmallHeaderLabel!
+    @IBOutlet weak var calenderIcon: UIImageView!
     @IBOutlet weak var overviewLabel: VerySmallHeaderLabel!
     
     func configureCell(withObject object:MovieResultsDataObject) {
@@ -93,8 +94,14 @@ class MovieResultsTableViewCell: UITableViewCell, ReusableView, NibLoadableView 
             adultLabel.text = "-"
         }
         
+        if let releaseDate = object.releaseDate {
+            releaseDateLabel.text = releaseDate
+            calenderIcon.isHidden = false
+        } else {
+            calenderIcon.isHidden = true
+            releaseDateLabel.text = nil
+        }
         
-        releaseDateLabel.text = object.releaseDate
         overviewLabel.text = object.overview
         
     }

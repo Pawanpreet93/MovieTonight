@@ -10,7 +10,7 @@ import Foundation
 
 class GetSearchResults {
     
-    func fetchResults(for query:String, pageNumber: Int, fetchRequestCompletionHandler: @escaping (_ status:RequestCompletionStates, _ response: MovieResults?) -> Void) {
+    func fetchResults(for query:String, pageNumber: Int, fetchRequestCompletionHandler: @escaping (_ status:RequestCompletionStates, _ response: SearchResultsDataModel?) -> Void) {
         
         let queryParams = ["query" : query, "page" : "\(pageNumber)"]
         
@@ -18,7 +18,8 @@ class GetSearchResults {
             if responseData != nil {
                 do {
                     let results = try JSONDecoder().decode(MovieResults.self, from: responseData!)
-                    fetchRequestCompletionHandler(.success, results)
+                    let dataModel = self.parseMovieObjects(for: results)
+                    fetchRequestCompletionHandler(.success, dataModel)
                 }
                 catch {
                     print("Error info: \(error)")
@@ -29,6 +30,37 @@ class GetSearchResults {
             fetchRequestCompletionHandler(status, nil)
         }
         
+    }
+    
+    private func parseMovieObjects(for object:MovieResults) -> SearchResultsDataModel {
+        
+        var dataModel = SearchResultsDataModel()
+        dataModel.metaData?.pageNumber = object.page
+        dataModel.metaData?.totalPages = object.totalPages
+        dataModel.metaData?.totalResults = object.totalResults
+        
+        var movieResults = [MovieResultsDataObject]()
+        
+        //Creating Table View Cell Data Objects
+        //We can skip this if we know we have to stay with same data source forever. If the data source/type can change, we should better convert it to view model. So that if we switch to XML or Proto from JSON, we can just change this.
+        if let results = object.results {
+            for eachResult in results {
+                var tvcTableViewModel = MovieResultsDataObject()
+                tvcTableViewModel.title = eachResult.title
+                tvcTableViewModel.releaseDate = TimeHelper.convertStringDate(date: eachResult.releaseDate, of: "yyyy-MM-dd", to: "MMM d, yyyy")
+                tvcTableViewModel.isAdult = eachResult.adult
+                tvcTableViewModel.language = eachResult.originalLanguage
+                tvcTableViewModel.overview = eachResult.overview
+                tvcTableViewModel.posterImageURL = URL(string: NetworkStatics.imageBaseURL.rawValue + (eachResult.posterPath ?? ""))
+                tvcTableViewModel.rating = eachResult.voteAverage
+                
+                movieResults.append(tvcTableViewModel)
+            }
+        }
+        
+        dataModel.results = movieResults
+     
+        return dataModel
     }
     
 }

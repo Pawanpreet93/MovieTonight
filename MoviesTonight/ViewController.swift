@@ -31,19 +31,26 @@ class ViewController: UIViewController {
 
     private func setupTableView() {
         
+        //Register Cells
         tableView.register(cell: MovieResultsTableViewCell.self)
+        tableView.register(cell: CachedSearchQueriesTableViewCell.self)
         
         //Adding Custom Data Source and Delegates.
-        tableView.dataSource = savedQueriesDataSource
-        tableView.delegate = savedQueriesDelegate
-        
-        savedQueriesDataSource.getData()
+//        tableView.dataSource = savedQueriesDataSource
+//        tableView.delegate = savedQueriesDelegate
+//        tableView.separatorStyle = .singleLine
+
+        //Listener to handle data source refresh
+        searchResultsDataSource.delegate = self
         
         //To consolidate spacing between cells
         tableView.contentInset = UIEdgeInsets(top: 6.0, left: 0, bottom: 6.0, right: 0)
         
         //To make cards more prominent
-        tableView.backgroundColor = UIColor(hex: Colors.background.rawValue)
+        tableView.backgroundColor = UIColor.white
+        
+        //To hide empty cells
+        tableView.tableFooterView = UIView()
     }
     
     private func setupSearch() {
@@ -68,10 +75,9 @@ class ViewController: UIViewController {
 extension ViewController: UISearchBarDelegate {
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-        
-        // Switching table view data source to cached data
-        tableView.dataSource = savedQueriesDataSource
-        tableView.delegate = savedQueriesDelegate
+        // Switching table view data source to empty
+        tableView.dataSource = nil
+        tableView.delegate = nil
         tableView.reloadData()
     }
     
@@ -80,6 +86,30 @@ extension ViewController: UISearchBarDelegate {
         // Switching table view data source to search data
         tableView.dataSource = searchResultsDataSource
         tableView.delegate = searchResultsDelegate
+        
+        if let query = searchBar.text {
+            searchResultsDataSource.getData(for: query)
+        }
+        
+        tableView.separatorStyle = .none
+        tableView.backgroundColor = UIColor(hex: Colors.background.rawValue)
         tableView.reloadData()
     }
+    
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        // Switching table view data source to cached data
+        tableView.dataSource = savedQueriesDataSource
+        tableView.delegate = savedQueriesDelegate
+        tableView.separatorStyle = .singleLine
+        tableView.backgroundColor = UIColor.white
+        tableView.reloadData()
+    }
+}
+
+extension ViewController : TableDataChange {
+    
+    func didChangeDataOfTable() {
+        self.tableView.reloadData()
+    }
+    
 }
