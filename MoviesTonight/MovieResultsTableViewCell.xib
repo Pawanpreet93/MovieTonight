@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="188" id="KGk-i7-Jjw" customClass="MovieResultsTableViewCell" customModule="MoviesTonight" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="528" height="188"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="528" height="187.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a63-Hb-vWf" customClass="CardView" customModule="MoviesTonight" customModuleProvider="target">
+                        <rect key="frame" x="12" y="6" width="504" height="175.5"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1PO-1g-T5F">
+                                <rect key="frame" x="0.0" y="0.0" width="504" height="175.5"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i5g-CI-8Kg">
+                                        <rect key="frame" x="0.0" y="0.0" width="504" height="175.5"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="J2m-WX-DCB">
+                                                <rect key="frame" x="12" y="12" width="100" height="151.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="100" id="XkL-VC-GVp"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r5a-nE-Tch" customClass="HeaderLabel" customModule="MoviesTonight" customModuleProvider="target">
+                                                <rect key="frame" x="120" y="12" width="376" height="20"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a3w-rb-TeJ" customClass="RegularLabel" customModule="MoviesTonight" customModuleProvider="target">
+                                                <rect key="frame" x="120" y="40" width="60" height="19"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="60" id="3fy-3j-0Ce"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y2D-NF-FQ3" customClass="VerySmallHeaderLabel" customModule="MoviesTonight" customModuleProvider="target">
+                                                <rect key="frame" x="148" y="65.5" width="344" height="19"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pfH-4y-fLc" customClass="RegularLabel" customModule="MoviesTonight" customModuleProvider="target">
+                                                <rect key="frame" x="188" y="37.5" width="40" height="20"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="20" id="Qyf-7M-Cvp"/>
+                                                    <constraint firstAttribute="width" constant="40" id="fu1-fC-dm9"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a07-in-8X2" customClass="RegularLabel" customModule="MoviesTonight" customModuleProvider="target">
+                                                <rect key="frame" x="236" y="37.5" width="40" height="20"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="40" id="0mX-0I-jDC"/>
+                                                    <constraint firstAttribute="height" constant="20" id="10J-uW-SYu"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calendar" translatesAutoresizingMaskIntoConstraints="NO" id="f82-H7-JOZ">
+                                                <rect key="frame" x="120" y="67" width="16" height="16"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="16" id="Chc-tQ-qu2"/>
+                                                    <constraint firstAttribute="height" constant="16" id="eyr-3N-EOW"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VQ8-jR-4R1" customClass="VerySmallHeaderLabel" customModule="MoviesTonight" customModuleProvider="target">
+                                                <rect key="frame" x="120" y="92.5" width="376" height="19"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="VQ8-jR-4R1" secondAttribute="trailing" constant="8" id="2Hx-7X-ZR9"/>
+                                            <constraint firstItem="pfH-4y-fLc" firstAttribute="centerY" secondItem="a3w-rb-TeJ" secondAttribute="centerY" constant="-2" id="3Ny-IH-pQT"/>
+                                            <constraint firstItem="a3w-rb-TeJ" firstAttribute="top" secondItem="r5a-nE-Tch" secondAttribute="bottom" constant="8" id="7ZX-Sw-bbp"/>
+                                            <constraint firstItem="J2m-WX-DCB" firstAttribute="top" secondItem="i5g-CI-8Kg" secondAttribute="top" constant="12" id="8dH-Ha-NGq"/>
+                                            <constraint firstAttribute="trailing" secondItem="r5a-nE-Tch" secondAttribute="trailing" constant="8" id="B9s-YR-YKc"/>
+                                            <constraint firstAttribute="bottom" secondItem="J2m-WX-DCB" secondAttribute="bottom" constant="12" id="Jix-DX-F9e"/>
+                                            <constraint firstItem="r5a-nE-Tch" firstAttribute="top" secondItem="i5g-CI-8Kg" secondAttribute="top" constant="12" id="KVa-kx-tPB"/>
+                                            <constraint firstItem="a07-in-8X2" firstAttribute="leading" secondItem="pfH-4y-fLc" secondAttribute="trailing" constant="8" id="LPK-Xs-hkR"/>
+                                            <constraint firstItem="Y2D-NF-FQ3" firstAttribute="centerY" secondItem="f82-H7-JOZ" secondAttribute="centerY" id="MLz-ZL-0rE"/>
+                                            <constraint firstItem="Y2D-NF-FQ3" firstAttribute="leading" secondItem="f82-H7-JOZ" secondAttribute="trailing" constant="12" id="NHv-6u-ANH"/>
+                                            <constraint firstAttribute="trailing" secondItem="Y2D-NF-FQ3" secondAttribute="trailing" constant="12" id="OMM-vp-Jvj"/>
+                                            <constraint firstItem="f82-H7-JOZ" firstAttribute="leading" secondItem="J2m-WX-DCB" secondAttribute="trailing" constant="8" id="PcR-Jz-osb"/>
+                                            <constraint firstItem="a3w-rb-TeJ" firstAttribute="leading" secondItem="J2m-WX-DCB" secondAttribute="trailing" constant="8" id="ZB5-V7-lAZ"/>
+                                            <constraint firstItem="VQ8-jR-4R1" firstAttribute="leading" secondItem="J2m-WX-DCB" secondAttribute="trailing" constant="8" id="eN3-lj-RBW"/>
+                                            <constraint firstItem="J2m-WX-DCB" firstAttribute="leading" secondItem="i5g-CI-8Kg" secondAttribute="leading" constant="12" id="fCl-dA-uGO"/>
+                                            <constraint firstItem="VQ8-jR-4R1" firstAttribute="top" secondItem="Y2D-NF-FQ3" secondAttribute="bottom" constant="8" id="lcc-jT-wA1"/>
+                                            <constraint firstItem="r5a-nE-Tch" firstAttribute="leading" secondItem="J2m-WX-DCB" secondAttribute="trailing" constant="8" id="tNu-A3-rX0"/>
+                                            <constraint firstItem="pfH-4y-fLc" firstAttribute="leading" secondItem="a3w-rb-TeJ" secondAttribute="trailing" constant="8" id="wHe-hY-Jcl"/>
+                                            <constraint firstItem="f82-H7-JOZ" firstAttribute="top" secondItem="a3w-rb-TeJ" secondAttribute="bottom" constant="8" id="yMF-IG-zaI"/>
+                                            <constraint firstItem="a07-in-8X2" firstAttribute="centerY" secondItem="pfH-4y-fLc" secondAttribute="centerY" id="zfq-tj-7a9"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="i5g-CI-8Kg" firstAttribute="leading" secondItem="1PO-1g-T5F" secondAttribute="leading" id="NDd-dS-2LP"/>
+                                    <constraint firstAttribute="bottom" secondItem="i5g-CI-8Kg" secondAttribute="bottom" id="OCa-xW-HcX"/>
+                                    <constraint firstItem="i5g-CI-8Kg" firstAttribute="top" secondItem="1PO-1g-T5F" secondAttribute="top" id="sJj-T9-7MW"/>
+                                    <constraint firstAttribute="trailing" secondItem="i5g-CI-8Kg" secondAttribute="trailing" id="w5w-hd-Jyu"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="1PO-1g-T5F" secondAttribute="bottom" id="MmX-ef-QRO"/>
+                            <constraint firstAttribute="trailing" secondItem="1PO-1g-T5F" secondAttribute="trailing" id="PsP-Hd-HHf"/>
+                            <constraint firstItem="1PO-1g-T5F" firstAttribute="top" secondItem="a63-Hb-vWf" secondAttribute="top" id="Zqt-bA-18p"/>
+                            <constraint firstItem="1PO-1g-T5F" firstAttribute="leading" secondItem="a63-Hb-vWf" secondAttribute="leading" id="q14-c5-uOU"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="a63-Hb-vWf" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="6" id="OO8-qT-6vb"/>
+                    <constraint firstItem="a63-Hb-vWf" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="SXx-h7-ODY"/>
+                    <constraint firstAttribute="trailing" secondItem="a63-Hb-vWf" secondAttribute="trailing" constant="12" id="XuX-UW-LyE"/>
+                    <constraint firstAttribute="bottom" secondItem="a63-Hb-vWf" secondAttribute="bottom" constant="6" id="pqt-Dc-Fwj"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="adultLabel" destination="a07-in-8X2" id="P9t-cL-UPm"/>
+                <outlet property="containerView" destination="1PO-1g-T5F" id="tMP-Yy-hbo"/>
+                <outlet property="languageLabel" destination="pfH-4y-fLc" id="nkh-fZ-HFn"/>
+                <outlet property="movieTitleLabel" destination="r5a-nE-Tch" id="agZ-mt-04Z"/>
+                <outlet property="overviewLabel" destination="VQ8-jR-4R1" id="Emt-8h-nI6"/>
+                <outlet property="posterImageView" destination="J2m-WX-DCB" id="X4z-kD-s5O"/>
+                <outlet property="ratingLabel" destination="a3w-rb-TeJ" id="Jf3-3T-2nU"/>
+                <outlet property="releaseDateLabel" destination="Y2D-NF-FQ3" id="Mi6-9k-eiv"/>
+                <outlet property="roundedView" destination="i5g-CI-8Kg" id="cHH-Ad-f6N"/>
+            </connections>
+            <point key="canvasLocation" x="296" y="89.055472263868069"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="calendar" width="16" height="17"/>
+    </resources>
+</document>

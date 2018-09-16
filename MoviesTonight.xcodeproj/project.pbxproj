@@ -14,6 +14,30 @@
 		87603111214AC7CC00D726CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87603110214AC7CC00D726CA /* Assets.xcassets */; };
 		87603114214AC7CC00D726CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87603112214AC7CC00D726CA /* LaunchScreen.storyboard */; };
 		8760311F214AC7CC00D726CA /* MoviesTonightTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8760311E214AC7CC00D726CA /* MoviesTonightTests.swift */; };
+		879005D1214AD55A00996C69 /* MovieResultsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879005CF214AD55A00996C69 /* MovieResultsTableViewCell.swift */; };
+		879005D2214AD55A00996C69 /* MovieResultsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 879005D0214AD55A00996C69 /* MovieResultsTableViewCell.xib */; };
+		879005D4214AD57200996C69 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879005D3214AD57200996C69 /* CardView.swift */; };
+		879005D6214AD67F00996C69 /* RegularLabels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879005D5214AD67F00996C69 /* RegularLabels.swift */; };
+		879005D8214AD6AE00996C69 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879005D7214AD6AE00996C69 /* Fonts.swift */; };
+		879005DA214AD72000996C69 /* HeadersLabels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879005D9214AD72000996C69 /* HeadersLabels.swift */; };
+		879005E8214AD77100996C69 /* SourceSansPro-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 879005DC214AD77100996C69 /* SourceSansPro-ExtraLightItalic.ttf */; };
+		879005E9214AD77100996C69 /* SourceSansPro-SemiboldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 879005DD214AD77100996C69 /* SourceSansPro-SemiboldItalic.ttf */; };
+		879005EA214AD77100996C69 /* SourceSansPro-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 879005DE214AD77100996C69 /* SourceSansPro-Regular.ttf */; };
+		879005EB214AD77100996C69 /* SourceSansPro-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 879005DF214AD77100996C69 /* SourceSansPro-Black.ttf */; };
+		879005EC214AD77100996C69 /* SourceSansPro-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 879005E0214AD77100996C69 /* SourceSansPro-Italic.ttf */; };
+		879005ED214AD77100996C69 /* SourceSansPro-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 879005E1214AD77100996C69 /* SourceSansPro-LightItalic.ttf */; };
+		879005EE214AD77100996C69 /* SourceSansPro-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 879005E2214AD77100996C69 /* SourceSansPro-BlackItalic.ttf */; };
+		879005EF214AD77100996C69 /* SourceSansPro-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 879005E3214AD77100996C69 /* SourceSansPro-Light.ttf */; };
+		879005F0214AD77100996C69 /* SourceSansPro-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 879005E4214AD77100996C69 /* SourceSansPro-ExtraLight.ttf */; };
+		879005F1214AD77100996C69 /* SourceSansPro-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 879005E5214AD77100996C69 /* SourceSansPro-Bold.ttf */; };
+		879005F2214AD77100996C69 /* SourceSansPro-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 879005E6214AD77100996C69 /* SourceSansPro-Semibold.ttf */; };
+		879005F3214AD77100996C69 /* SourceSansPro-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 879005E7214AD77100996C69 /* SourceSansPro-BoldItalic.ttf */; };
+		879005F5214AEBB100996C69 /* ReusableViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879005F4214AEBB100996C69 /* ReusableViewProtocol.swift */; };
+		879005FA214AEDED00996C69 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 879005F8214AEDED00996C69 /* Localizable.strings */; };
+		879005FE214AEE8100996C69 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879005FD214AEE8100996C69 /* Strings.swift */; };
+		87900600214AF29400996C69 /* SearchResultsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879005FF214AF29400996C69 /* SearchResultsDataSource.swift */; };
+		87900602214AF75200996C69 /* SavedQueriesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87900601214AF75200996C69 /* SavedQueriesDataSource.swift */; };
+		D51A926330D0F6E3FD95B6EF /* Pods_MoviesTonight.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE783238F989CC21A96E17F3 /* Pods_MoviesTonight.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +51,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4C007FF1170B87A84EB507D0 /* Pods-MoviesTonight.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoviesTonight.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MoviesTonight/Pods-MoviesTonight.debug.xcconfig"; sourceTree = "<group>"; };
 		87603103214AC7CA00D726CA /* MoviesTonight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoviesTonight.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		87603106214AC7CA00D726CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		87603108214AC7CA00D726CA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -38,6 +63,35 @@
 		8760311A214AC7CC00D726CA /* MoviesTonightTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoviesTonightTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8760311E214AC7CC00D726CA /* MoviesTonightTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesTonightTests.swift; sourceTree = "<group>"; };
 		87603120214AC7CC00D726CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		879005CF214AD55A00996C69 /* MovieResultsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieResultsTableViewCell.swift; sourceTree = "<group>"; };
+		879005D0214AD55A00996C69 /* MovieResultsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieResultsTableViewCell.xib; sourceTree = "<group>"; };
+		879005D3214AD57200996C69 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		879005D5214AD67F00996C69 /* RegularLabels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegularLabels.swift; sourceTree = "<group>"; };
+		879005D7214AD6AE00996C69 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		879005D9214AD72000996C69 /* HeadersLabels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadersLabels.swift; sourceTree = "<group>"; };
+		879005DC214AD77100996C69 /* SourceSansPro-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SourceSansPro-ExtraLightItalic.ttf"; path = "Fonts/SourceSansPro-ExtraLightItalic.ttf"; sourceTree = SOURCE_ROOT; };
+		879005DD214AD77100996C69 /* SourceSansPro-SemiboldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SourceSansPro-SemiboldItalic.ttf"; path = "Fonts/SourceSansPro-SemiboldItalic.ttf"; sourceTree = SOURCE_ROOT; };
+		879005DE214AD77100996C69 /* SourceSansPro-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SourceSansPro-Regular.ttf"; path = "Fonts/SourceSansPro-Regular.ttf"; sourceTree = SOURCE_ROOT; };
+		879005DF214AD77100996C69 /* SourceSansPro-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SourceSansPro-Black.ttf"; path = "Fonts/SourceSansPro-Black.ttf"; sourceTree = SOURCE_ROOT; };
+		879005E0214AD77100996C69 /* SourceSansPro-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SourceSansPro-Italic.ttf"; path = "Fonts/SourceSansPro-Italic.ttf"; sourceTree = SOURCE_ROOT; };
+		879005E1214AD77100996C69 /* SourceSansPro-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SourceSansPro-LightItalic.ttf"; path = "Fonts/SourceSansPro-LightItalic.ttf"; sourceTree = SOURCE_ROOT; };
+		879005E2214AD77100996C69 /* SourceSansPro-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SourceSansPro-BlackItalic.ttf"; path = "Fonts/SourceSansPro-BlackItalic.ttf"; sourceTree = SOURCE_ROOT; };
+		879005E3214AD77100996C69 /* SourceSansPro-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SourceSansPro-Light.ttf"; path = "Fonts/SourceSansPro-Light.ttf"; sourceTree = SOURCE_ROOT; };
+		879005E4214AD77100996C69 /* SourceSansPro-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SourceSansPro-ExtraLight.ttf"; path = "Fonts/SourceSansPro-ExtraLight.ttf"; sourceTree = SOURCE_ROOT; };
+		879005E5214AD77100996C69 /* SourceSansPro-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SourceSansPro-Bold.ttf"; path = "Fonts/SourceSansPro-Bold.ttf"; sourceTree = SOURCE_ROOT; };
+		879005E6214AD77100996C69 /* SourceSansPro-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SourceSansPro-Semibold.ttf"; path = "Fonts/SourceSansPro-Semibold.ttf"; sourceTree = SOURCE_ROOT; };
+		879005E7214AD77100996C69 /* SourceSansPro-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SourceSansPro-BoldItalic.ttf"; path = "Fonts/SourceSansPro-BoldItalic.ttf"; sourceTree = SOURCE_ROOT; };
+		879005F4214AEBB100996C69 /* ReusableViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableViewProtocol.swift; sourceTree = "<group>"; };
+		879005F6214AED8F00996C69 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Main.strings; sourceTree = "<group>"; };
+		879005F7214AED9000996C69 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		879005F9214AEDED00996C69 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		879005FB214AEE0900996C69 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
+		879005FD214AEE8100996C69 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
+		879005FF214AF29400996C69 /* SearchResultsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsDataSource.swift; sourceTree = "<group>"; };
+		87900601214AF75200996C69 /* SavedQueriesDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedQueriesDataSource.swift; sourceTree = "<group>"; };
+		B18DBD7B8B8EE7F0CCFA1EEE /* Pods_MoviesTonightTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MoviesTonightTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C6E36FDE877633F070560E22 /* Pods-MoviesTonight.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoviesTonight.release.xcconfig"; path = "Pods/Target Support Files/Pods-MoviesTonight/Pods-MoviesTonight.release.xcconfig"; sourceTree = "<group>"; };
+		FE783238F989CC21A96E17F3 /* Pods_MoviesTonight.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MoviesTonight.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +99,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D51A926330D0F6E3FD95B6EF /* Pods_MoviesTonight.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,8 +117,11 @@
 			isa = PBXGroup;
 			children = (
 				87603105214AC7CA00D726CA /* MoviesTonight */,
+				8760311E214AC7CC00D726CA /* MoviesTonightTests.swift */,
 				8760311D214AC7CC00D726CA /* MoviesTonightTests */,
 				87603104214AC7CA00D726CA /* Products */,
+				D11418687EC11426151DE0B6 /* Pods */,
+				93A1AEC2074FFFF32A76BCB6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -81,11 +139,23 @@
 			children = (
 				87603106214AC7CA00D726CA /* AppDelegate.swift */,
 				87603108214AC7CA00D726CA /* ViewController.swift */,
+				879005FF214AF29400996C69 /* SearchResultsDataSource.swift */,
+				87900601214AF75200996C69 /* SavedQueriesDataSource.swift */,
 				8760310A214AC7CA00D726CA /* Main.storyboard */,
+				879005DB214AD75800996C69 /* Fonts */,
+				879005D3214AD57200996C69 /* CardView.swift */,
+				879005D7214AD6AE00996C69 /* Fonts.swift */,
+				879005F4214AEBB100996C69 /* ReusableViewProtocol.swift */,
+				879005FD214AEE8100996C69 /* Strings.swift */,
+				879005D5214AD67F00996C69 /* RegularLabels.swift */,
+				879005D9214AD72000996C69 /* HeadersLabels.swift */,
+				879005CF214AD55A00996C69 /* MovieResultsTableViewCell.swift */,
+				879005D0214AD55A00996C69 /* MovieResultsTableViewCell.xib */,
 				87603110214AC7CC00D726CA /* Assets.xcassets */,
 				87603112214AC7CC00D726CA /* LaunchScreen.storyboard */,
 				87603115214AC7CC00D726CA /* Info.plist */,
 				8760310D214AC7CA00D726CA /* MoviesTonight.xcdatamodeld */,
+				879005F8214AEDED00996C69 /* Localizable.strings */,
 			);
 			path = MoviesTonight;
 			sourceTree = "<group>";
@@ -93,10 +163,46 @@
 		8760311D214AC7CC00D726CA /* MoviesTonightTests */ = {
 			isa = PBXGroup;
 			children = (
-				8760311E214AC7CC00D726CA /* MoviesTonightTests.swift */,
 				87603120214AC7CC00D726CA /* Info.plist */,
 			);
 			path = MoviesTonightTests;
+			sourceTree = "<group>";
+		};
+		879005DB214AD75800996C69 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				879005DF214AD77100996C69 /* SourceSansPro-Black.ttf */,
+				879005E2214AD77100996C69 /* SourceSansPro-BlackItalic.ttf */,
+				879005E5214AD77100996C69 /* SourceSansPro-Bold.ttf */,
+				879005E7214AD77100996C69 /* SourceSansPro-BoldItalic.ttf */,
+				879005E4214AD77100996C69 /* SourceSansPro-ExtraLight.ttf */,
+				879005DC214AD77100996C69 /* SourceSansPro-ExtraLightItalic.ttf */,
+				879005E0214AD77100996C69 /* SourceSansPro-Italic.ttf */,
+				879005E3214AD77100996C69 /* SourceSansPro-Light.ttf */,
+				879005E1214AD77100996C69 /* SourceSansPro-LightItalic.ttf */,
+				879005DE214AD77100996C69 /* SourceSansPro-Regular.ttf */,
+				879005E6214AD77100996C69 /* SourceSansPro-Semibold.ttf */,
+				879005DD214AD77100996C69 /* SourceSansPro-SemiboldItalic.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		93A1AEC2074FFFF32A76BCB6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FE783238F989CC21A96E17F3 /* Pods_MoviesTonight.framework */,
+				B18DBD7B8B8EE7F0CCFA1EEE /* Pods_MoviesTonightTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D11418687EC11426151DE0B6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4C007FF1170B87A84EB507D0 /* Pods-MoviesTonight.debug.xcconfig */,
+				C6E36FDE877633F070560E22 /* Pods-MoviesTonight.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -106,9 +212,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 87603123214AC7CC00D726CA /* Build configuration list for PBXNativeTarget "MoviesTonight" */;
 			buildPhases = (
+				4731C5928CA70EF5F6811164 /* [CP] Check Pods Manifest.lock */,
 				876030FF214AC7CA00D726CA /* Sources */,
 				87603100214AC7CA00D726CA /* Frameworks */,
 				87603101214AC7CA00D726CA /* Resources */,
+				AEADF276DB4F7543DFE69106 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -163,6 +271,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ar,
 			);
 			mainGroup = 876030FA214AC7CA00D726CA;
 			productRefGroup = 87603104214AC7CA00D726CA /* Products */;
@@ -180,9 +289,23 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				879005FA214AEDED00996C69 /* Localizable.strings in Resources */,
+				879005E9214AD77100996C69 /* SourceSansPro-SemiboldItalic.ttf in Resources */,
+				879005EE214AD77100996C69 /* SourceSansPro-BlackItalic.ttf in Resources */,
+				879005EC214AD77100996C69 /* SourceSansPro-Italic.ttf in Resources */,
+				879005F3214AD77100996C69 /* SourceSansPro-BoldItalic.ttf in Resources */,
+				879005EF214AD77100996C69 /* SourceSansPro-Light.ttf in Resources */,
+				879005E8214AD77100996C69 /* SourceSansPro-ExtraLightItalic.ttf in Resources */,
+				879005F1214AD77100996C69 /* SourceSansPro-Bold.ttf in Resources */,
 				87603114214AC7CC00D726CA /* LaunchScreen.storyboard in Resources */,
+				879005EA214AD77100996C69 /* SourceSansPro-Regular.ttf in Resources */,
+				879005ED214AD77100996C69 /* SourceSansPro-LightItalic.ttf in Resources */,
+				879005F0214AD77100996C69 /* SourceSansPro-ExtraLight.ttf in Resources */,
+				879005EB214AD77100996C69 /* SourceSansPro-Black.ttf in Resources */,
 				87603111214AC7CC00D726CA /* Assets.xcassets in Resources */,
 				8760310C214AC7CA00D726CA /* Main.storyboard in Resources */,
+				879005D2214AD55A00996C69 /* MovieResultsTableViewCell.xib in Resources */,
+				879005F2214AD77100996C69 /* SourceSansPro-Semibold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,14 +318,62 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4731C5928CA70EF5F6811164 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MoviesTonight-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AEADF276DB4F7543DFE69106 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MoviesTonight/Pods-MoviesTonight-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MoviesTonight/Pods-MoviesTonight-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		876030FF214AC7CA00D726CA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				879005D8214AD6AE00996C69 /* Fonts.swift in Sources */,
 				8760310F214AC7CA00D726CA /* MoviesTonight.xcdatamodeld in Sources */,
+				879005FE214AEE8100996C69 /* Strings.swift in Sources */,
+				879005F5214AEBB100996C69 /* ReusableViewProtocol.swift in Sources */,
 				87603109214AC7CA00D726CA /* ViewController.swift in Sources */,
 				87603107214AC7CA00D726CA /* AppDelegate.swift in Sources */,
+				879005D1214AD55A00996C69 /* MovieResultsTableViewCell.swift in Sources */,
+				87900600214AF29400996C69 /* SearchResultsDataSource.swift in Sources */,
+				879005DA214AD72000996C69 /* HeadersLabels.swift in Sources */,
+				879005D4214AD57200996C69 /* CardView.swift in Sources */,
+				879005D6214AD67F00996C69 /* RegularLabels.swift in Sources */,
+				87900602214AF75200996C69 /* SavedQueriesDataSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -229,6 +400,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				8760310B214AC7CA00D726CA /* Base */,
+				879005F6214AED8F00996C69 /* ar */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -237,8 +409,18 @@
 			isa = PBXVariantGroup;
 			children = (
 				87603113214AC7CC00D726CA /* Base */,
+				879005F7214AED9000996C69 /* ar */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		879005F8214AEDED00996C69 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				879005F9214AEDED00996C69 /* Base */,
+				879005FB214AEE0900996C69 /* ar */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -248,6 +430,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -309,6 +492,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -362,6 +546,7 @@
 		};
 		87603124214AC7CC00D726CA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4C007FF1170B87A84EB507D0 /* Pods-MoviesTonight.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -380,6 +565,7 @@
 		};
 		87603125214AC7CC00D726CA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C6E36FDE877633F070560E22 /* Pods-MoviesTonight.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

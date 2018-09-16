@@ -10,11 +10,53 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet var tableView: UITableView!
+    var searchResultsDataSource = SearchResultsDataSource()
+    var searchResultsDelegate = SearchResultsDelegate()
+    var savedQueriesDataSource = SavedQueriesDataSource()
+    var savedQueriesDelegate = SavedQueriesDelegate()
+    let searchController = UISearchController(searchResultsController: nil)
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        searchController.searchBar.delegate = self
+        
+        if #available(iOS 9.1, *) {
+            searchController.obscuresBackgroundDuringPresentation = false
+        }
+        
+        searchController.searchBar.placeholder = getString(for: Strings.searchMovies.rawValue)
+        
+        if #available(iOS 11.0, *) {
+            navigationItem.searchController = searchController
+            navigationItem.hidesSearchBarWhenScrolling = false
+        } else {
+            tableView.tableHeaderView = searchController.searchBar
+        }
+        
+        tableView.register(cell: MovieResultsTableViewCell.self)
+        tableView.dataSource = savedQueriesDataSource
+        tableView.delegate = savedQueriesDelegate
+        tableView.contentInset = UIEdgeInsets(top: 6.0, left: 0, bottom: 0, right: 0)
+
     }
 
 
 }
 
+
+extension ViewController: UISearchBarDelegate {
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        tableView.dataSource = savedQueriesDataSource
+        tableView.delegate = savedQueriesDelegate
+        tableView.reloadData()
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        tableView.dataSource = searchResultsDataSource
+        tableView.delegate = searchResultsDelegate
+        tableView.reloadData()
+    }
+}
