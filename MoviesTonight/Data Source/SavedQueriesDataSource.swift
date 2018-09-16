@@ -11,6 +11,13 @@ import UIKit
 
 class SavedQueriesDataSource: NSObject,  UITableViewDataSource {
     
+    func getData() {
+        let object = GetSearchResults()
+        object.fetchResults(for: "batman", pageNumber: 1) { (status, resultObject) in
+        }
+    }
+    
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 10
     }
