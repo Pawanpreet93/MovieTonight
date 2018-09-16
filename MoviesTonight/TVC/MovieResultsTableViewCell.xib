@@ -27,8 +27,9 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i5g-CI-8Kg">
                                         <rect key="frame" x="0.0" y="0.0" width="504" height="175.5"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="J2m-WX-DCB">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="J2m-WX-DCB">
                                                 <rect key="frame" x="12" y="12" width="100" height="151.5"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="100" id="XkL-VC-GVp"/>
                                                 </constraints>
@@ -39,50 +40,51 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a3w-rb-TeJ" customClass="RegularLabel" customModule="MoviesTonight" customModuleProvider="target">
-                                                <rect key="frame" x="120" y="40" width="60" height="19"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a3w-rb-TeJ" customClass="SmallHeaderLabel" customModule="MoviesTonight" customModuleProvider="target">
+                                                <rect key="frame" x="120" y="40" width="40" height="20"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="60" id="3fy-3j-0Ce"/>
+                                                    <constraint firstAttribute="width" constant="40" id="3fy-3j-0Ce"/>
+                                                    <constraint firstAttribute="height" constant="20" id="IAN-x4-h1J"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y2D-NF-FQ3" customClass="VerySmallHeaderLabel" customModule="MoviesTonight" customModuleProvider="target">
-                                                <rect key="frame" x="148" y="65.5" width="344" height="19"/>
+                                                <rect key="frame" x="140" y="66.5" width="352" height="19"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pfH-4y-fLc" customClass="RegularLabel" customModule="MoviesTonight" customModuleProvider="target">
-                                                <rect key="frame" x="188" y="37.5" width="40" height="20"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pfH-4y-fLc" customClass="SmallHeaderLabel" customModule="MoviesTonight" customModuleProvider="target">
+                                                <rect key="frame" x="168" y="40" width="40" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="20" id="Qyf-7M-Cvp"/>
                                                     <constraint firstAttribute="width" constant="40" id="fu1-fC-dm9"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a07-in-8X2" customClass="RegularLabel" customModule="MoviesTonight" customModuleProvider="target">
-                                                <rect key="frame" x="236" y="37.5" width="40" height="20"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a07-in-8X2" customClass="SmallHeaderLabel" customModule="MoviesTonight" customModuleProvider="target">
+                                                <rect key="frame" x="216" y="40" width="40" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="40" id="0mX-0I-jDC"/>
                                                     <constraint firstAttribute="height" constant="20" id="10J-uW-SYu"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calendar" translatesAutoresizingMaskIntoConstraints="NO" id="f82-H7-JOZ">
-                                                <rect key="frame" x="120" y="67" width="16" height="16"/>
+                                                <rect key="frame" x="120" y="68" width="16" height="16"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="16" id="Chc-tQ-qu2"/>
                                                     <constraint firstAttribute="height" constant="16" id="eyr-3N-EOW"/>
                                                 </constraints>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VQ8-jR-4R1" customClass="VerySmallHeaderLabel" customModule="MoviesTonight" customModuleProvider="target">
-                                                <rect key="frame" x="120" y="92.5" width="376" height="19"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VQ8-jR-4R1" customClass="RegularSmallLabel" customModule="MoviesTonight" customModuleProvider="target">
+                                                <rect key="frame" x="120" y="93.5" width="376" height="19"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -91,7 +93,7 @@
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="VQ8-jR-4R1" secondAttribute="trailing" constant="8" id="2Hx-7X-ZR9"/>
-                                            <constraint firstItem="pfH-4y-fLc" firstAttribute="centerY" secondItem="a3w-rb-TeJ" secondAttribute="centerY" constant="-2" id="3Ny-IH-pQT"/>
+                                            <constraint firstItem="pfH-4y-fLc" firstAttribute="centerY" secondItem="a3w-rb-TeJ" secondAttribute="centerY" id="3Ny-IH-pQT"/>
                                             <constraint firstItem="a3w-rb-TeJ" firstAttribute="top" secondItem="r5a-nE-Tch" secondAttribute="bottom" constant="8" id="7ZX-Sw-bbp"/>
                                             <constraint firstItem="J2m-WX-DCB" firstAttribute="top" secondItem="i5g-CI-8Kg" secondAttribute="top" constant="12" id="8dH-Ha-NGq"/>
                                             <constraint firstAttribute="trailing" secondItem="r5a-nE-Tch" secondAttribute="trailing" constant="8" id="B9s-YR-YKc"/>
@@ -99,16 +101,16 @@
                                             <constraint firstItem="r5a-nE-Tch" firstAttribute="top" secondItem="i5g-CI-8Kg" secondAttribute="top" constant="12" id="KVa-kx-tPB"/>
                                             <constraint firstItem="a07-in-8X2" firstAttribute="leading" secondItem="pfH-4y-fLc" secondAttribute="trailing" constant="8" id="LPK-Xs-hkR"/>
                                             <constraint firstItem="Y2D-NF-FQ3" firstAttribute="centerY" secondItem="f82-H7-JOZ" secondAttribute="centerY" id="MLz-ZL-0rE"/>
-                                            <constraint firstItem="Y2D-NF-FQ3" firstAttribute="leading" secondItem="f82-H7-JOZ" secondAttribute="trailing" constant="12" id="NHv-6u-ANH"/>
+                                            <constraint firstItem="Y2D-NF-FQ3" firstAttribute="leading" secondItem="f82-H7-JOZ" secondAttribute="trailing" constant="4" id="NHv-6u-ANH"/>
                                             <constraint firstAttribute="trailing" secondItem="Y2D-NF-FQ3" secondAttribute="trailing" constant="12" id="OMM-vp-Jvj"/>
                                             <constraint firstItem="f82-H7-JOZ" firstAttribute="leading" secondItem="J2m-WX-DCB" secondAttribute="trailing" constant="8" id="PcR-Jz-osb"/>
                                             <constraint firstItem="a3w-rb-TeJ" firstAttribute="leading" secondItem="J2m-WX-DCB" secondAttribute="trailing" constant="8" id="ZB5-V7-lAZ"/>
                                             <constraint firstItem="VQ8-jR-4R1" firstAttribute="leading" secondItem="J2m-WX-DCB" secondAttribute="trailing" constant="8" id="eN3-lj-RBW"/>
                                             <constraint firstItem="J2m-WX-DCB" firstAttribute="leading" secondItem="i5g-CI-8Kg" secondAttribute="leading" constant="12" id="fCl-dA-uGO"/>
+                                            <constraint firstItem="f82-H7-JOZ" firstAttribute="top" secondItem="a3w-rb-TeJ" secondAttribute="bottom" constant="8" id="igk-7Y-Tgi"/>
                                             <constraint firstItem="VQ8-jR-4R1" firstAttribute="top" secondItem="Y2D-NF-FQ3" secondAttribute="bottom" constant="8" id="lcc-jT-wA1"/>
                                             <constraint firstItem="r5a-nE-Tch" firstAttribute="leading" secondItem="J2m-WX-DCB" secondAttribute="trailing" constant="8" id="tNu-A3-rX0"/>
                                             <constraint firstItem="pfH-4y-fLc" firstAttribute="leading" secondItem="a3w-rb-TeJ" secondAttribute="trailing" constant="8" id="wHe-hY-Jcl"/>
-                                            <constraint firstItem="f82-H7-JOZ" firstAttribute="top" secondItem="a3w-rb-TeJ" secondAttribute="bottom" constant="8" id="yMF-IG-zaI"/>
                                             <constraint firstItem="a07-in-8X2" firstAttribute="centerY" secondItem="pfH-4y-fLc" secondAttribute="centerY" id="zfq-tj-7a9"/>
                                         </constraints>
                                     </view>
@@ -139,15 +141,16 @@
                     <constraint firstAttribute="bottom" secondItem="a63-Hb-vWf" secondAttribute="bottom" constant="6" id="pqt-Dc-Fwj"/>
                 </constraints>
             </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="adultLabel" destination="a07-in-8X2" id="P9t-cL-UPm"/>
+                <outlet property="adultLabel" destination="a07-in-8X2" id="nKu-Xp-NIC"/>
                 <outlet property="containerView" destination="1PO-1g-T5F" id="tMP-Yy-hbo"/>
-                <outlet property="languageLabel" destination="pfH-4y-fLc" id="nkh-fZ-HFn"/>
+                <outlet property="languageLabel" destination="pfH-4y-fLc" id="qgz-WK-ufs"/>
                 <outlet property="movieTitleLabel" destination="r5a-nE-Tch" id="agZ-mt-04Z"/>
                 <outlet property="overviewLabel" destination="VQ8-jR-4R1" id="Emt-8h-nI6"/>
                 <outlet property="posterImageView" destination="J2m-WX-DCB" id="X4z-kD-s5O"/>
-                <outlet property="ratingLabel" destination="a3w-rb-TeJ" id="Jf3-3T-2nU"/>
+                <outlet property="ratingLabel" destination="a3w-rb-TeJ" id="tHd-md-abh"/>
                 <outlet property="releaseDateLabel" destination="Y2D-NF-FQ3" id="Mi6-9k-eiv"/>
                 <outlet property="roundedView" destination="i5g-CI-8Kg" id="cHH-Ad-f6N"/>
             </connections>

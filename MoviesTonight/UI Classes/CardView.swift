@@ -8,6 +8,7 @@
 
 import UIKit
 
+/// To give bouchy animation on tap
 class CardView: UIView {
 
     var animationDuration = 0.2

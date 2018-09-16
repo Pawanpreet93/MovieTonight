@@ -13,6 +13,7 @@ enum Strings : String {
     case searchMovies = "SEARCH_MOVIES"
 }
 
+/// To get localized string for the specific key
 func getString(for key:String, and comment:String? = "") -> String {
     return NSLocalizedString(key, comment: comment ?? "")
 }
