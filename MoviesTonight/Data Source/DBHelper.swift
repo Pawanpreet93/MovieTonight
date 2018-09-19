@@ -23,6 +23,7 @@ enum DBHelper {
                 removeQueryFromDB(withText: text)
             }
             
+            //If count of cached queries is equal to 10, then first removed the oldest query string and then will add a new entry to DB.
             if alreadyCachedQueries?.count == 10 && alreadyCachedQueries?.first != nil {
                 removeQueryFromDB(withText: (alreadyCachedQueries?.first)!)
             }
@@ -33,6 +34,7 @@ enum DBHelper {
             let entity = NSEntityDescription.entity(forEntityName: "Queries", in: context)
             let query = NSManagedObject(entity: entity!, insertInto: context) as? Queries
             
+            //Adding query to DB with current Date ande query string
             query?.timestamp = Date()
             query?.query = text
             
@@ -50,6 +52,8 @@ enum DBHelper {
         var queries:[Queries]?
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
+        
+        //Fetching all the queries present in the DB.
         let fetchRequest = NSFetchRequest<Queries>(entityName: "Queries")
         
         let sort = NSSortDescriptor(key: #keyPath(Queries.timestamp), ascending: needSorting)
@@ -61,6 +65,7 @@ enum DBHelper {
             print("Cannot fetch Expenses")
         }
         
+        //Map only Query string to Array and return.
         return queries?.map{$0.query ?? ""}
     }
     
@@ -70,6 +75,8 @@ enum DBHelper {
         let context = appDelegate.persistentContainer.viewContext
         
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Queries")
+        
+        //Get particular query string and remove from the DB.
         fetchRequest.predicate = NSPredicate(format: "query == %@", text)
         do {
             let objects = try context.fetch(fetchRequest)

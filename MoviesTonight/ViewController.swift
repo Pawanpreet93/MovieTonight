@@ -9,9 +9,12 @@
 import UIKit
 
 protocol TableDataChange {
+    
+    ///Reload table view
+    ///Used specifically when data source/delegate has to be changed
     func reloadTableView()
     
-    // To get search results when cached query is selected from other data source
+    /// To get search results when cached query is selected from other data source
     func getSearchResults(forQuery query: String)
 }
 
@@ -100,6 +103,7 @@ extension ViewController: UISearchBarDelegate {
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        //If search bar goes empty then show Cached data
         if searchBar.text?.isEmpty ?? false {
             switchToSavedQueriesState()
         }
@@ -110,8 +114,10 @@ extension ViewController: UISearchBarDelegate {
         tableView.dataSource = searchResultsDataSourceAndDelegate
         tableView.delegate = searchResultsDataSourceAndDelegate
         
+        //Ask Data Source to search data
         searchResultsDataSourceAndDelegate.search(for: query)
         
+        //UI changes for search results
         tableView.separatorStyle = .none
         tableView.backgroundColor = UIColor(hex: Colors.background.rawValue)
         tableView.reloadData()
@@ -121,7 +127,11 @@ extension ViewController: UISearchBarDelegate {
         // Switching table view data source to cached data
         tableView.dataSource = savedQueriesDataSourceAndDelegate
         tableView.delegate = savedQueriesDataSourceAndDelegate
+        
+        //Ask Data Source to get cached data from Core data
         savedQueriesDataSourceAndDelegate.fetchQueries()
+        
+        //UI changes for queries
         tableView.separatorStyle = .singleLine
         tableView.backgroundColor = UIColor.white
         tableView.reloadData()
@@ -135,7 +145,10 @@ extension ViewController : TableDataChange {
     }
     
     func getSearchResults(forQuery query: String) {
+        //Adding cached string to search bar text
         searchController.searchBar.text = query
+        
+        //Get results
         searchResults(forQuery: query)
     }
     

@@ -36,27 +36,34 @@ class SearchResultsDataSourceAndDelegate: NSObject,  UITableViewDataSource, UITa
         
         object.fetchResults(for: query, pageNumber: metaData.pageNumber ?? 1) { (status, resultObject) in
             
+            //Update status and metadata for future referene
             self.statusOfData = status
             self.metaData = resultObject?.metaData ?? SearchResultsMetaData()
             
+            //To mark loading done!
             self.isLoadingMoreData = false
             
+            //Check if this api call is the last call for the query string
             if resultObject?.metaData?.pageNumber == resultObject?.metaData?.totalPages {
                 self.noMoreDataToLoad = true
             } else {
                 self.noMoreDataToLoad = false
             }
             
+            //Appending the results to data source object
             if let fetchedResults = resultObject?.results {
                 self.searchObjects.append(contentsOf: fetchedResults)
             }
             
+            //If API was a success but no data came up.
             if self.searchObjects.count == 0 && self.statusOfData == .success {
                 self.statusOfData = .noData
             }
             
+            //If this is first search and returbn > 1 results, so save the query to Core Database
             if resultObject?.metaData?.pageNumber == 1 && self.searchObjects.count > 0{
                 DBHelper.addQueryToDB(withText: query, completion: { (status) in
+                    //Nothing to do for now.
                 })
             }
             
