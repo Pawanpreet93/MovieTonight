@@ -13,8 +13,7 @@ class ViewController: UIViewController {
     @IBOutlet var tableView: UITableView!
     
     // Search result lives here
-    var searchResultsDataSource = SearchResultsDataSource()
-    var searchResultsDelegate = SearchResultsDelegate()
+    var searchResultsDataSourceAndDelegate = SearchResultsDataSourceAndDelegate()
     
     // Cached Search Queries lives here
     var savedQueriesDataSource = SavedQueriesDataSource()
@@ -34,14 +33,11 @@ class ViewController: UIViewController {
         //Register Cells
         tableView.register(cell: MovieResultsTableViewCell.self)
         tableView.register(cell: CachedSearchQueriesTableViewCell.self)
+        tableView.register(cell: LoaderTableViewCell.self)
+        tableView.register(cell: EmptyNoInternetTableViewCell.self)
         
-        //Adding Custom Data Source and Delegates.
-//        tableView.dataSource = savedQueriesDataSource
-//        tableView.delegate = savedQueriesDelegate
-//        tableView.separatorStyle = .singleLine
-
         //Listener to handle data source refresh
-        searchResultsDataSource.delegate = self
+        searchResultsDataSourceAndDelegate.delegate = self
         
         //To consolidate spacing between cells
         tableView.contentInset = UIEdgeInsets(top: 6.0, left: 0, bottom: 6.0, right: 0)
@@ -84,11 +80,11 @@ extension ViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         
         // Switching table view data source to search data
-        tableView.dataSource = searchResultsDataSource
-        tableView.delegate = searchResultsDelegate
+        tableView.dataSource = searchResultsDataSourceAndDelegate
+        tableView.delegate = searchResultsDataSourceAndDelegate
         
         if let query = searchBar.text {
-            searchResultsDataSource.getData(for: query)
+            searchResultsDataSourceAndDelegate.search(for: query)
         }
         
         tableView.separatorStyle = .none
@@ -108,7 +104,7 @@ extension ViewController: UISearchBarDelegate {
 
 extension ViewController : TableDataChange {
     
-    func didChangeDataOfTable() {
+    func reloadTableView() {
         self.tableView.reloadData()
     }
     

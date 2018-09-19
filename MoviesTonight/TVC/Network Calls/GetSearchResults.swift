@@ -26,8 +26,9 @@ class GetSearchResults {
                     fetchRequestCompletionHandler(status, nil)
                     return
                 }
+            } else {
+                fetchRequestCompletionHandler(status, nil)
             }
-            fetchRequestCompletionHandler(status, nil)
         }
         
     }
@@ -35,9 +36,13 @@ class GetSearchResults {
     private func parseMovieObjects(for object:MovieResults) -> SearchResultsDataModel {
         
         var dataModel = SearchResultsDataModel()
-        dataModel.metaData?.pageNumber = object.page
-        dataModel.metaData?.totalPages = object.totalPages
-        dataModel.metaData?.totalResults = object.totalResults
+        var metaData = SearchResultsMetaData()
+        
+        metaData.pageNumber = object.page
+        metaData.totalPages = object.totalPages
+        metaData.totalResults = object.totalResults
+        
+        dataModel.metaData = metaData
         
         var movieResults = [MovieResultsDataObject]()
         

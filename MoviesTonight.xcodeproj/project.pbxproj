@@ -38,7 +38,7 @@
 		879005F5214AEBB100996C69 /* ReusableViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879005F4214AEBB100996C69 /* ReusableViewProtocol.swift */; };
 		879005FA214AEDED00996C69 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 879005F8214AEDED00996C69 /* Localizable.strings */; };
 		879005FE214AEE8100996C69 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879005FD214AEE8100996C69 /* Strings.swift */; };
-		87900600214AF29400996C69 /* SearchResultsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879005FF214AF29400996C69 /* SearchResultsDataSource.swift */; };
+		87900600214AF29400996C69 /* SearchResultsDataSourceAndDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879005FF214AF29400996C69 /* SearchResultsDataSourceAndDelegate.swift */; };
 		87900602214AF75200996C69 /* SavedQueriesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87900601214AF75200996C69 /* SavedQueriesDataSource.swift */; };
 		D51A926330D0F6E3FD95B6EF /* Pods_MoviesTonight.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE783238F989CC21A96E17F3 /* Pods_MoviesTonight.framework */; };
 /* End PBXBuildFile section */
@@ -93,7 +93,7 @@
 		879005F9214AEDED00996C69 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		879005FB214AEE0900996C69 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
 		879005FD214AEE8100996C69 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
-		879005FF214AF29400996C69 /* SearchResultsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsDataSource.swift; sourceTree = "<group>"; };
+		879005FF214AF29400996C69 /* SearchResultsDataSourceAndDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsDataSourceAndDelegate.swift; sourceTree = "<group>"; };
 		87900601214AF75200996C69 /* SavedQueriesDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedQueriesDataSource.swift; sourceTree = "<group>"; };
 		B18DBD7B8B8EE7F0CCFA1EEE /* Pods_MoviesTonightTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MoviesTonightTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6E36FDE877633F070560E22 /* Pods-MoviesTonight.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoviesTonight.release.xcconfig"; path = "Pods/Target Support Files/Pods-MoviesTonight/Pods-MoviesTonight.release.xcconfig"; sourceTree = "<group>"; };
@@ -172,7 +172,7 @@
 		876117CB214E6E5800A65769 /* Data Source */ = {
 			isa = PBXGroup;
 			children = (
-				879005FF214AF29400996C69 /* SearchResultsDataSource.swift */,
+				879005FF214AF29400996C69 /* SearchResultsDataSourceAndDelegate.swift */,
 				87900601214AF75200996C69 /* SavedQueriesDataSource.swift */,
 			);
 			path = "Data Source";
@@ -423,7 +423,7 @@
 				876117C6214E547A00A65769 /* ColorExtension.swift in Sources */,
 				87603107214AC7CA00D726CA /* AppDelegate.swift in Sources */,
 				879005D1214AD55A00996C69 /* MovieResultsTableViewCell.swift in Sources */,
-				87900600214AF29400996C69 /* SearchResultsDataSource.swift in Sources */,
+				87900600214AF29400996C69 /* SearchResultsDataSourceAndDelegate.swift in Sources */,
 				876117CA214E64A400A65769 /* MovieResultsDataObject.swift in Sources */,
 				876117B3214E4E9800A65769 /* Assets.swift in Sources */,
 				876117F4214ED6B600A65769 /* EmptyNoInternetTableViewCell.swift in Sources */,

@@ -95,23 +95,8 @@ enum APIManager {
             
             fetchRequestCompletionHandler(.success, responseData)
 
-            // Parse the result as JSON
-            // In case the response type changes, change the parsing technique
-//            do {
-//                guard let responseObject = try JSONSerialization.jsonObject(with: responseData, options: [])
-//                    as? [String: Any] else {
-//                        print("Error: Trying to convert data to JSON")
-//                        fetchRequestCompletionHandler(.failed, nil)
-//                        return
-//                }
-//
-//
-//            } catch  {
-//                print("Error: Trying to convert data to JSON")
-//                fetchRequestCompletionHandler(.failed, nil)
-//                return
-//            }
         }
+        
         task.resume()
     }
 }
