@@ -10,7 +10,11 @@ import Foundation
 import UIKit
 
 enum Strings : String {
+    case search = "SEARCH"
     case searchMovies = "SEARCH_MOVIES"
+    case noData = "NO_DATA"
+    case noInternet = "NO_INTERNET"
+    case loading = "LOADING"
 }
 
 /// To get localized string for the specific key

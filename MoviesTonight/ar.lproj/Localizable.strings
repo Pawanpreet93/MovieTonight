@@ -5,3 +5,9 @@
   Created by Pawan on 14/09/18.
   Copyright © 2018 Pawan. All rights reserved.
 */
+
+"SEARCH" = "بحث";
+"SEARCH_MOVIES" = "بحث أفلام";
+"NO_DATA" = "لاتوجد بيانات";
+"NO_INTERNET" = "لا انترنت";
+"LOADING" = "جار التحميل...";

@@ -32,10 +32,10 @@ class EmptyNoInternetTableViewCell: UITableViewCell, ReusableView, NibLoadableVi
     func setState(state:EmptyCellStates) {
         switch state {
         case .noData:
-            stateText.text = "No Data Found"
+            stateText.text = getString(for: Strings.noData.rawValue)
             stateImage.image = UIImage(named: "noData")
         case .noInternet:
-            stateText.text = "No Internet"
+            stateText.text = getString(for: Strings.noInternet.rawValue)
             stateImage.image = UIImage(named: "noInternet")
         }
     }

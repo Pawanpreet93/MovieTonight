@@ -6,4 +6,8 @@
   Copyright © 2018 Pawan. All rights reserved.
 */
 
+"SEARCH" = "Search";
 "SEARCH_MOVIES" = "Search Movies";
+"NO_DATA" = "No Data Found";
+"NO_INTERNET" = "No Internet";
+"LOADING" = "Loading...";
