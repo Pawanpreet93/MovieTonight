@@ -9,10 +9,6 @@
 import Foundation
 import UIKit
 
-protocol TableDataChange {
-    func reloadTableView()
-}
-
 class SearchResultsDataSourceAndDelegate: NSObject,  UITableViewDataSource, UITableViewDelegate {
     
     var metaData = SearchResultsMetaData()
@@ -26,6 +22,7 @@ class SearchResultsDataSourceAndDelegate: NSObject,  UITableViewDataSource, UITa
     
     func search(for text:String) {
         searchObjects.removeAll()
+        metaData = SearchResultsMetaData()
         getData(for: text)
     }
 
@@ -56,6 +53,11 @@ class SearchResultsDataSourceAndDelegate: NSObject,  UITableViewDataSource, UITa
             
             if self.searchObjects.count == 0 && self.statusOfData == .success {
                 self.statusOfData = .noData
+            }
+            
+            if resultObject?.metaData?.pageNumber == 1 && self.searchObjects.count > 0{
+                DBHelper.addQueryToDB(withText: query, completion: { (status) in
+                })
             }
             
             DispatchQueue.main.sync {
@@ -107,14 +109,10 @@ class SearchResultsDataSourceAndDelegate: NSObject,  UITableViewDataSource, UITa
             return
         }
         
-        print(isLoadingMoreData)
-        print(statusOfData)
-        
         if indexPath.row == searchObjects.count - 1 && !isLoadingMoreData && statusOfData != .loading {
             isLoadingMoreData = true
             metaData.pageNumber = (metaData.pageNumber ?? 1) + 1
             getData(for: self.query)
-            delegate?.reloadTableView()
         }
     }
     

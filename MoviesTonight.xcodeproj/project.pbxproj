@@ -39,7 +39,8 @@
 		879005FA214AEDED00996C69 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 879005F8214AEDED00996C69 /* Localizable.strings */; };
 		879005FE214AEE8100996C69 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879005FD214AEE8100996C69 /* Strings.swift */; };
 		87900600214AF29400996C69 /* SearchResultsDataSourceAndDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879005FF214AF29400996C69 /* SearchResultsDataSourceAndDelegate.swift */; };
-		87900602214AF75200996C69 /* SavedQueriesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87900601214AF75200996C69 /* SavedQueriesDataSource.swift */; };
+		87900602214AF75200996C69 /* SavedQueriesDataSourceAndDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87900601214AF75200996C69 /* SavedQueriesDataSourceAndDelegate.swift */; };
+		879FF4042152BF39005DF64A /* DBHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879FF4032152BF39005DF64A /* DBHelper.swift */; };
 		D51A926330D0F6E3FD95B6EF /* Pods_MoviesTonight.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE783238F989CC21A96E17F3 /* Pods_MoviesTonight.framework */; };
 /* End PBXBuildFile section */
 
@@ -94,7 +95,8 @@
 		879005FB214AEE0900996C69 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
 		879005FD214AEE8100996C69 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		879005FF214AF29400996C69 /* SearchResultsDataSourceAndDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsDataSourceAndDelegate.swift; sourceTree = "<group>"; };
-		87900601214AF75200996C69 /* SavedQueriesDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedQueriesDataSource.swift; sourceTree = "<group>"; };
+		87900601214AF75200996C69 /* SavedQueriesDataSourceAndDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedQueriesDataSourceAndDelegate.swift; sourceTree = "<group>"; };
+		879FF4032152BF39005DF64A /* DBHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBHelper.swift; sourceTree = "<group>"; };
 		B18DBD7B8B8EE7F0CCFA1EEE /* Pods_MoviesTonightTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MoviesTonightTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6E36FDE877633F070560E22 /* Pods-MoviesTonight.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoviesTonight.release.xcconfig"; path = "Pods/Target Support Files/Pods-MoviesTonight/Pods-MoviesTonight.release.xcconfig"; sourceTree = "<group>"; };
 		FE783238F989CC21A96E17F3 /* Pods_MoviesTonight.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MoviesTonight.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -173,7 +175,8 @@
 			isa = PBXGroup;
 			children = (
 				879005FF214AF29400996C69 /* SearchResultsDataSourceAndDelegate.swift */,
-				87900601214AF75200996C69 /* SavedQueriesDataSource.swift */,
+				87900601214AF75200996C69 /* SavedQueriesDataSourceAndDelegate.swift */,
+				879FF4032152BF39005DF64A /* DBHelper.swift */,
 			);
 			path = "Data Source";
 			sourceTree = "<group>";
@@ -428,12 +431,13 @@
 				876117B3214E4E9800A65769 /* Assets.swift in Sources */,
 				876117F4214ED6B600A65769 /* EmptyNoInternetTableViewCell.swift in Sources */,
 				876117EF214EB74800A65769 /* SearchResultsDataModel.swift in Sources */,
+				879FF4042152BF39005DF64A /* DBHelper.swift in Sources */,
 				876117D4214E71EC00A65769 /* APIManager.swift in Sources */,
 				879005DA214AD72000996C69 /* HeadersLabels.swift in Sources */,
 				879005D4214AD57200996C69 /* CardView.swift in Sources */,
 				876117E7214E7D4F00A65769 /* GetSearchResults.swift in Sources */,
 				879005D6214AD67F00996C69 /* RegularLabels.swift in Sources */,
-				87900602214AF75200996C69 /* SavedQueriesDataSource.swift in Sources */,
+				87900602214AF75200996C69 /* SavedQueriesDataSourceAndDelegate.swift in Sources */,
 				876117E9214E7F6A00A65769 /* MovieResultsAPIModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,6 +8,13 @@
 
 import UIKit
 
+protocol TableDataChange {
+    func reloadTableView()
+    
+    // To get search results when cached query is selected from other data source
+    func getSearchResults(forQuery query: String)
+}
+
 class ViewController: UIViewController {
 
     @IBOutlet var tableView: UITableView!
@@ -16,8 +23,7 @@ class ViewController: UIViewController {
     var searchResultsDataSourceAndDelegate = SearchResultsDataSourceAndDelegate()
     
     // Cached Search Queries lives here
-    var savedQueriesDataSource = SavedQueriesDataSource()
-    var savedQueriesDelegate = SavedQueriesDelegate()
+    var savedQueriesDataSourceAndDelegate = SavedQueriesDataSourceAndDelegate()
     
     // Search Bar
     let searchController = UISearchController(searchResultsController: nil)
@@ -39,6 +45,9 @@ class ViewController: UIViewController {
         //Listener to handle data source refresh
         searchResultsDataSourceAndDelegate.delegate = self
         
+        //Listener to handle cached query click
+        savedQueriesDataSourceAndDelegate.delegate = self
+
         //To consolidate spacing between cells
         tableView.contentInset = UIEdgeInsets(top: 6.0, left: 0, bottom: 6.0, right: 0)
         
@@ -47,6 +56,9 @@ class ViewController: UIViewController {
         
         //To hide empty cells
         tableView.tableFooterView = UIView()
+        
+        //Dismiss keyboard on drag
+        tableView.keyboardDismissMode = .onDrag
     }
     
     private func setupSearch() {
@@ -78,24 +90,38 @@ extension ViewController: UISearchBarDelegate {
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        
+        if let query = searchBar.text {
+            searchResults(forQuery: query)
+        }
+    }
+    
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        switchToSavedQueriesState()
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchBar.text?.isEmpty ?? false {
+            switchToSavedQueriesState()
+        }
+    }
+    
+    private func searchResults(forQuery query:String) {
         // Switching table view data source to search data
         tableView.dataSource = searchResultsDataSourceAndDelegate
         tableView.delegate = searchResultsDataSourceAndDelegate
         
-        if let query = searchBar.text {
-            searchResultsDataSourceAndDelegate.search(for: query)
-        }
+        searchResultsDataSourceAndDelegate.search(for: query)
         
         tableView.separatorStyle = .none
         tableView.backgroundColor = UIColor(hex: Colors.background.rawValue)
         tableView.reloadData()
     }
     
-    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+    private func switchToSavedQueriesState() {
         // Switching table view data source to cached data
-        tableView.dataSource = savedQueriesDataSource
-        tableView.delegate = savedQueriesDelegate
+        tableView.dataSource = savedQueriesDataSourceAndDelegate
+        tableView.delegate = savedQueriesDataSourceAndDelegate
+        savedQueriesDataSourceAndDelegate.fetchQueries()
         tableView.separatorStyle = .singleLine
         tableView.backgroundColor = UIColor.white
         tableView.reloadData()
@@ -103,9 +129,15 @@ extension ViewController: UISearchBarDelegate {
 }
 
 extension ViewController : TableDataChange {
-    
+   
     func reloadTableView() {
         self.tableView.reloadData()
     }
+    
+    func getSearchResults(forQuery query: String) {
+        searchController.searchBar.text = query
+        searchResults(forQuery: query)
+    }
+    
     
 }

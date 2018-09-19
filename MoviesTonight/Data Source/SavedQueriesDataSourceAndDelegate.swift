@@ -9,23 +9,32 @@
 import Foundation
 import UIKit
 
-class SavedQueriesDataSource: NSObject,  UITableViewDataSource {
+class SavedQueriesDataSourceAndDelegate: NSObject,  UITableViewDataSource, UITableViewDelegate {
+    
+    var cachedQueries = [String]()
+    var delegate:TableDataChange?
+
+    func fetchQueries() {
+        cachedQueries = DBHelper.getCachedQueriesFromDB(withAscendingSorting: false) ?? [String]()
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return cachedQueries.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: CachedSearchQueriesTableViewCell = tableView.dequeueReusableCell(forIndexPath: indexPath)
-        cell.searchTextLabel.text = "asdfc"
+        cell.searchTextLabel.text = cachedQueries[indexPath.row]
         cell.selectionStyle = .none
         return cell
     }
     
-}
-
-class SavedQueriesDelegate: NSObject,  UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 50
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        delegate?.getSearchResults(forQuery: cachedQueries[indexPath.row])
+    }
+    
 }
