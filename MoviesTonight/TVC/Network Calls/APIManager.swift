@@ -77,8 +77,10 @@ enum APIManager {
                     switch nsError.code {
                     case NSURLErrorTimedOut, NSURLErrorCannotConnectToHost, NSURLErrorNetworkConnectionLost, NSURLErrorNotConnectedToInternet:
                         fetchRequestCompletionHandler(.noInternet, nil)
+                        return
                     default:
                         fetchRequestCompletionHandler(.failed, nil)
+                        return
                     }
                 }
                 
